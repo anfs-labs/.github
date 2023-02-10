@@ -35,6 +35,8 @@ Several commonly used types are provided for consideration:
     - style: format or beautify code without effects on main function
     - chore: modifications of dependencies or build tools
     - docs: write documentation(e.g. README.md)
+    - revert: revert commit
+    - test: test related changes
 ```
 
 ##### 2. scope
