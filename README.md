@@ -61,7 +61,12 @@ feat(font-end): click affix to back to homepage
 #### Footer
 `Footer` is an uncommon part. When some **breaking changes** are added to a commit, it's mainly used to append descriptions, reasons and methods of migration
 
+### Add Change-ID Hook
 
+```sh
+git clone https://github.com/anfs-labs/.github.git ~/.gittemplates
+git config --global init.templatedir ~/.gittemplates/gittemplates
+```
 
 ### Sample
 
