@@ -109,3 +109,36 @@ Date:   Tue Feb 28 11:07:25 2021 +0000
 
     Change-Id: xxxxxx
 ```
+
+## Cargo.toml Specification
+
+### Dependencies
+
+All dependencies defined to the workspace, e.g.
+
+In package Cargo.toml:
+
+```toml
+[workspace.dependencies]
+tracing = "0.1"
+tracing-subscriber = "0.3"
+anyhow = "1"
+async-trait = "0.1"
+tokio = { version = "1", features = ["full"] }
+lazy_static = { version = "1.4.0" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+```
+
+- In crate Cargo.toml, inherit workspace dependencies and clearly classify them
+
+```toml
+[dependencies]
+tracing = { workspace = true }
+
+[dev-dependencies]
+tracing-subscriber = { workspace = true }
+
+[build-dependencies]
+tokio = { workspace = true }
+```
